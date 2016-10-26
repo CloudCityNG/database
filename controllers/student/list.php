@@ -5,7 +5,7 @@
  * Date: 25/10/2016
  * Time: 20:50
  */
-require_once(dirname(__FILE__, 3)."/models/student.php");
+require_once(dirname(dirname(dirname(__FILE__)))."/models/student.php");
 
 $student_model = new Student();
 
