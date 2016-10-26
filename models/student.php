@@ -28,12 +28,24 @@ class Student
     }
 
     public function add_student($student) {
-        $stmt = $this->conn->prepare("INSERT INTO $this->table(student_number, firstname, lastname) 
-          VALUES (:student_number, :firstname, :lastname)");
+        $stmt = $this->conn->prepare("INSERT INTO $this->table(student_number, firstname, lastname, father_name, 
+          mother_name, address, city, state_or_province, postal_code, phone_number, email_name, major, note) 
+          VALUES (:student_number, :firstname, :lastname, :father_name, 
+          :mother_name, :address, :city, :state_or_province, :postal_code, :phone_number, :email_name, :major, :note)");
         $value = array(
             "student_number" => $student["student_number"],
             "firstname" => $student["firstname"],
-            "lastname" => $student["lastname"]
+            "lastname" => $student["lastname"],
+            "father_name" => $student["father_name"],
+            "mother_name" => $student["mother_name"],
+            "address" => $student["address"],
+            "city" => $student["city"],
+            "state_or_province" => $student["state_or_province"],
+            "postal_code" => $student["postal_code"],
+            "phone_number" => $student["phone_number"],
+            "email_name" => $student["email_name"],
+            "major" => $student["major"],
+            "note" => $student["note"]
         );
         $stmt->execute($value);
     }

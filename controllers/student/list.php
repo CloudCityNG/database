@@ -9,6 +9,10 @@ require_once(dirname(__FILE__, 3)."/models/student.php");
 
 $student_model = new Student();
 
+if(isset($_POST['delete'])) {
+    $student_model->delete_student($_POST['id']);
+}
+
 $student_list = $student_model->get_student_list();
 
 require "../../views/student/list.tor.php";

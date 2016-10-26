@@ -32,10 +32,17 @@ $(document).ready(function () {
            student_number: "Hãy điền mã sinh viên",
            firstname: "Hãy điền tên sinh viên",
            lastname: "Hãy điền họ sinh viên",
+           address: "Hãy nhập địa chỉ",
+           state_or_province: "Hãy nhập tên thành phố",
+           phone_number: {
+               required: "Hãy nhập số điện thoại",
+               digits: "Số điện thoại chỉ bao gồm số"
+           },
            email_name: {
                required: "Hãy điền email",
                email: "Định dạng email không đúng"
-           }
+           },
+           major: "Hãy nhập tên khoa"
        }
    });
 
