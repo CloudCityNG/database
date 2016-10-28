@@ -15,4 +15,4 @@ if(isset($_POST['delete'])) {
 
 $student_list = $student_model->get_student_list();
 
-require "../../views/student/list.tor.php";
+// require "../../views/student/list.tor.php";
