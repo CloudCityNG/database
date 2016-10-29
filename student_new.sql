@@ -405,6 +405,10 @@ ALTER TABLE `report`
 ALTER TABLE `student`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+
+-- AUTO_INCREMENT for table 'department'
+ALTER TABLE `department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 -- Constraints for dumped tables
 --
 
