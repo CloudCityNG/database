@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $('#addForm').validate({
+   $('#form').validate({
        rules: {
            student_number: {
                required: true
@@ -46,4 +46,5 @@ $(document).ready(function () {
        }
    });
 
+    $("input:text").focus(function() { $(this).select(); } );
 });

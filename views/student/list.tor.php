@@ -16,6 +16,11 @@
                 <button type="button" class="btn btn-md btn-info">Add Student</button>
             </a>
         </div>
+        <?php if($name != ""): ?>
+        <div class="noti">
+            haha
+        </div>
+        <?php endif; ?>
         <table class="table table-striped">
             <thead>
                 <th>Student Number</th>
@@ -32,9 +37,9 @@
                 <td><?php echo $student['lastname']; ?></td>
                 <td><?php echo $student['address']; ?></td>
                 <td>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="<?php echo '#edit'.$student['id'] ?>" >
+                    <a href="../../controllers/student/edit.php?id=<?php echo $student['id'] ?>"><button type="button" class="btn btn-primary">
                         Edit
-                    </button>
+                    </button></a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="<?php echo '#delete'.$student['id'] ?>" >
@@ -43,78 +48,10 @@
                 </td>
             </tr>
 
-            <!-- Modal -->
-            <div id="<?php echo 'edit'.$student['id']; ?>" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Details</h4>
-                        </div>
-                        <div class="modal-body">
-                            <ul class="list-inline">
-                                <li>Student Number:</li>
-                                <li><?php echo $student["student_number"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>First Name:</li>
-                                <li><?php echo $student["firstname"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Last Name:</li>
-                                <li><?php echo $student["lastname"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Father Name:</li>
-                                <li><?php echo $student["father_name"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Mother Name:</li>
-                                <li><?php echo $student["mother_name"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Address:</li>
-                                <li><?php echo $student["address"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>City:</li>
-                                <li><?php echo $student["city"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>State Or Province:</li>
-                                <li><?php echo $student["state_or_province"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Postal Code:</li>
-                                <li><?php echo $student['postal_code']?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Phone Number:</li>
-                                <li><?php echo $student["phone_number"]?></li>
-                            </ul><ul class="list-inline">
-                                <li>Email:</li>
-                                <li><?php echo $student["email_name"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Major:</li>
-                                <li><?php echo $student["major"]?></li>
-                            </ul>
-                            <ul class="list-inline">
-                                <li>Note:</li>
-                                <li><?php echo $student["note"]?></li>
-                            </ul>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div id="<?php echo 'delete'.$student['id']; ?>" class="modal fade" role="dialog">
                 <form method="post">
                     <input type="hidden" name="id" value="<?php echo $student['id']; ?>">
+                    <input type="hidden" name="name" value="<?php echo $student['firstname']; ?>">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -147,6 +84,8 @@
 </div>
 
 <script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../public/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="../../public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../public/js/validate.js"></script>
 </body>
 </html>

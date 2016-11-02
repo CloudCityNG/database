@@ -25,6 +25,7 @@ class Student
     public function get_student($id) {
         $stmt = $this->conn->prepare("SELECT * FROM $this->table WHERE id = ?");
         $stmt->execute(array($id));
+        return $stmt->fetch();
     }
 
     public function add_student($student) {
@@ -52,14 +53,34 @@ class Student
 
     public function edit_student($id, $student) {
         $stmt = $this->conn->prepare("UPDATE $this->table SET
+            student_number = :student_number,
             firstname = :firstname,
             lastname = :lastname,
-            student_number = :student_number
+            father_name = :father_name,
+            mother_name = :mother_name,
+            address = :address,
+            city = :city,
+            state_or_province = :state_or_province,
+            postal_code = :postal_code,
+            phone_number = :phone_number,
+            email_name = :email_name,
+            major = :major,
+            note = :note
             WHERE id = :id");
         $value = array(
             "student_number" => $student["student_number"],
             "firstname" => $student["firstname"],
             "lastname" => $student["lastname"],
+            "father_name" => $student["father_name"],
+            "mother_name" => $student["mother_name"],
+            "address" => $student["address"],
+            "city" => $student["city"],
+            "state_or_province" => $student["state_or_province"],
+            "postal_code" => $student["postal_code"],
+            "phone_number" => $student["phone_number"],
+            "email_name" => $student["email_name"],
+            "major" => $student["major"],
+            "note" => $student["note"],
             "id" => $id
         );
         $stmt->execute($value);

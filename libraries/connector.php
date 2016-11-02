@@ -12,7 +12,7 @@ class Connector
     private $app_url = "http://localhost/";
     private $db_server = "localhost";
     private $db_user = "root";
-    private $db_pass = "12345";
+    private $db_pass = "";
     private $db_name = "student";
 
     /**
@@ -42,7 +42,7 @@ class Connector
         catch(PDOException $e)
         {
             $this->conn = null;
-            throw new Exception('Database Connection Fail');
+            throw new Exception('Reconfig the password for database or another reason');
         }
     }
 
