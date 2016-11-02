@@ -5,6 +5,7 @@
  * Date: 25/10/2016
  * Time: 20:50
  */
+
 class Connector
 {
     private static $instance;

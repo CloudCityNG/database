@@ -45,6 +45,6 @@ $(document).ready(function () {
            major: "Hãy nhập tên khoa"
        }
    });
-
     $("input:text").focus(function() { $(this).select(); } );
 });
+

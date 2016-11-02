@@ -4,6 +4,8 @@
     <title>Danh sách sinh viên</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+
+    <?php require "../../controllers/student/list.php";?>
 </head>
 <body>
 <div class="container">
