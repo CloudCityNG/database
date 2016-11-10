@@ -27,3 +27,4 @@ if(isset($_POST['edit'])){
     );
     $instructor_model->edit_instructor($id,$instructor);
 }
+require "../../views/instructor/list.tor.php";

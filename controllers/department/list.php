@@ -27,3 +27,4 @@ if(isset($_POST['edit'])){
 	);
 	$department_model->edit_department($id,$department);
 }
+require "../../views/department/list.tor.php";
