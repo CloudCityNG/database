@@ -4,51 +4,47 @@
     <title>Danh sách sinh viên</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
-
-    <?php //require "../../controllers/student/list.php";?>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <h2>Student List</h2>
+            <h2>Class List</h2>
         </div>
         <div class="col-md-3">
-            <a class="add pull-right" href="../../controllers/student/add.php">
-                <button type="button" class="btn btn-md btn-info">Add Student</button>
+            <a class="add pull-right" href="../../controllers/class/add.php">
+                <button type="button" class="btn btn-md btn-info">Add Class</button>
             </a>
         </div>
         <table class="table table-striped">
             <thead>
-                <th>Student Number</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Address</th>
+                <th>Class Name</th>
+                <th>Instructor Name</th>
+                <th>Department Name</th>
                 <th></th>
                 <th></th>
             </thead>
-            <?php foreach($student_list as $student): ?>
+            <?php foreach($class_list as $class): ?>
             <tr>
-                <td><?php echo $student['student_number']; ?></td>
-                <td><?php echo $student['firstname']; ?></td>
-                <td><?php echo $student['lastname']; ?></td>
-                <td><?php echo $student['address']; ?></td>
+                <td><?php echo $class['class_name']; ?></td>
+                <td><?php echo $class['instructor_name']; ?></td>
+                <td><?php echo $class['department_name']; ?></td>
                 <td>
-                    <a href="../../controllers/student/edit.php?id=<?php echo $student['id'] ?>"><button type="button" class="btn btn-primary">
+                    <a href="../../controllers/class/edit.php?id=<?php echo $class['id'] ?>"><button type="button" class="btn btn-primary">
                         Edit
                     </button></a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="<?php echo '#delete'.$student['id'] ?>" >
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="<?php echo '#delete'.$class['id'] ?>" >
                         Delete
                     </button>
                 </td>
             </tr>
 
-            <div id="<?php echo 'delete'.$student['id']; ?>" class="modal fade" role="dialog">
+            <div id="<?php echo 'delete'.$class['id']; ?>" class="modal fade" role="dialog">
                 <form method="post">
-                    <input type="hidden" name="id" value="<?php echo $student['id']; ?>">
-                    <input type="hidden" name="name" value="<?php echo $student['firstname']; ?>">
+                    <input type="hidden" name="id" value="<?php echo $class['id']; ?>">
+                    <input type="hidden" name="name" value="<?php echo $class['class_name']; ?>">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -58,7 +54,7 @@
                             <div class="modal-body">
                                 <div class="alert alert-danger">
                                     <span class="glyphicon glyphicon-warning-sign"></span>
-                                    Are you sure you want to delete <?php echo $student['firstname']?>?
+                                    Are you sure you want to delete <?php echo $class['class_name']?>?
                                 </div>
                             </div>
                             <div class="modal-footer">

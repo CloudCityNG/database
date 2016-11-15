@@ -5,7 +5,7 @@
 * gmail: lytuanduong96@gmail.com
 */
 
-require_once (dirname(dirname(dirname(__FILE__))).'/models/reports.php');
+require_once(dirname(dirname(dirname(__FILE__))) . '/models/report.php');
 
 $report_model = new Reports();
 
@@ -17,4 +17,4 @@ if($_POST){
 	$report_model->add_report($report);
 	
 }
-require "../../views/reports/add.tor.php";
+require "../../views/report/add.tor.php";

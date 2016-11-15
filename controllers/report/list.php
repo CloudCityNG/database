@@ -3,7 +3,7 @@
 * author: Ly Van Tuan
 * gmail: lytuanduong96@gmail.com
 */
-require_once(dirname(dirname(dirname(__FILE__))).'/models/reports.php');
+require_once(dirname(dirname(dirname(__FILE__))) . '/models/report.php');
 
 $reports_model = new Reports();
 

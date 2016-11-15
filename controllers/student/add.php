@@ -10,7 +10,7 @@ require_once(dirname(dirname(dirname(__FILE__)))."/models/student.php");
 $student_model = new Student();
 
 if($_POST) {
-    $student = array(
+    $class = array(
         "student_number" => $_POST["student_number"],
         "firstname" => $_POST["firstname"],
         "lastname" => $_POST["lastname"],
@@ -25,7 +25,7 @@ if($_POST) {
         "major" => $_POST["major"],
         "note" => $_POST["note"]
     );
-    $student_model->add_student($student);
+    $student_model->add_student($class);
 }
 
 require "../../views/student/add.tor.php";

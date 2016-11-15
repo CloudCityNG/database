@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-9"><h2>Add report </h2></div>
         <div class="col-md-3">
-            <a href="../../views/reports/list.tor.php" class="pull-right add">
+            <a href="/list.tor.php" class="pull-right add">
                 <button type="button" class="btn btn-primary">List Report</button>
             </a>
         </div>

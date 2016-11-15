@@ -6,7 +6,7 @@
 	<title>Reports List</title>
 	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../public/css/main.css">
-	<?php require('../../controllers/reports/list.php');?>
+	<?php require('../../controllers/report/list.php');?>
 </head>
 <body>
 	<div class="container">
@@ -15,7 +15,7 @@
 			<h2>Reports List</h2>
 		</div>
 		<div class="col-md-3" >
-			<a href="../../controllers/reports/add.php"  class="add pull-right">
+			<a href="../../controllers/report/add.php" class="add pull-right">
 				<button type="button" class="btn  btn-info">Add Reports</button>
 			</a>
 		</div>			
