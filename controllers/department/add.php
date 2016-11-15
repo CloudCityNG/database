@@ -14,3 +14,4 @@ if($_POST){
 	);
 	$department_model->add_department($department);			
 }
+require "../../views/department/add.tor.php";

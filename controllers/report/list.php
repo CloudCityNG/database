@@ -23,3 +23,4 @@ if(isset($_POST['edit'])){
 	);
 	$reports_model->edit_report($id,$report);
 }
+require "../../views/report/list.tor.php";

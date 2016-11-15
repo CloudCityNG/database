@@ -4,13 +4,53 @@
     <title>Add report</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/mystyle.css">
 </head>
 <body>
 <div class="container">
+ <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Student Manager
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="../../controllers/student/list.php">Student Board</a>
+                </li>
+                <li>
+                    <a href="../../controllers/department/list.php">Department Board</a>
+                </li>
+                <li>
+                    <a href="../../controllers/instructor/list.php">Instructor Board</a>
+                </li>
+                <li>
+                    <a href="../../controllers/reports/list.php">Report Board</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
     <div class="row">
         <div class="col-md-9"><h2>Add report </h2></div>
         <div class="col-md-3">
+<<<<<<< HEAD:views/report/add.tor.php
             <a href="/list.tor.php" class="pull-right add">
+=======
+            <a href="../../controllers/reports/list.php" class="pull-right add">
+>>>>>>> b755cd0f6b0e7df3ae085efbe923fc1627c8b79a:views/reports/add.tor.php
                 <button type="button" class="btn btn-primary">List Report</button>
             </a>
         </div>

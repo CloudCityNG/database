@@ -4,9 +4,46 @@
     <title>Thêm sinh viên</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/mystyle.css">
 </head>
 <body>
+ <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Student Manager
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="../../controllers/student/list.php">Student Board</a>
+                </li>
+                <li>
+                    <a href="../../controllers/department/list.php">Department Board</a>
+                </li>
+                <li>
+                    <a href="../../controllers/instructor/list.php">Instructor Board</a>
+                </li>
+                <li>
+                    <a href="../../controllers/reports/list.php">Report Board</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
 <div class="container">
+
     <h2>Thêm sinh viên</h2>
     <form id="form" method="post">
         <div class="form-group">
