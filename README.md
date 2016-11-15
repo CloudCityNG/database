@@ -13,3 +13,7 @@ UPDATE increment cho id của depart ment. a/e pull database về và chạy l�
 Xây dựng navbar cho các trang
 --------------------------------------------------------------------------------
 
+Require
+
+PHP version >= 5.3
+

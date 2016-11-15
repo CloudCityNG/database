@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>instructor List</title>
 	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/main.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 </head>
 <body>
  <div id="wrapper">

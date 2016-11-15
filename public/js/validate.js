@@ -46,5 +46,10 @@ $(document).ready(function () {
        }
    });
     $("input:text").focus(function() { $(this).select(); } );
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
 });
 

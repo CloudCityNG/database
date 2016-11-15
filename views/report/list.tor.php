@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Reports List</title>
 	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 <<<<<<< HEAD:views/report/list.tor.php
 	<?php require('../../controllers/report/list.php');?>
 =======
-	<link rel="stylesheet" type="text/css" href="../../public/css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 >>>>>>> b755cd0f6b0e7df3ae085efbe923fc1627c8b79a:views/reports/list.tor.php
 </head>
 <body>

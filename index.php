@@ -8,15 +8,12 @@
 </head>
 <body>
 <div class="container">
-	
 	<div class="well">
 		<h1 style="text-align:center">
 			Quản lí sinh viên
 		</h1>
 	<a href="controllers/student/list.php">
 		WELCOME
-		
-
 	</a>	
 	</div>
 </div>

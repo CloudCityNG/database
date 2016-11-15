@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Thêm lớp</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 </head>
 <body>
 <div class="container">

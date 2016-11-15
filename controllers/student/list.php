@@ -11,7 +11,6 @@ $student_model = new Student();
 
 if(isset($_POST['delete'])) {
     $student_model->delete_student($_POST['id']);
-    $name = $_POST['name'];
 }
 
 $student_list = $student_model->get_student_list();
