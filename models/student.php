@@ -5,7 +5,7 @@
  * Date: 25/10/2016
  * Time: 21:12
  */
-require_once(dirname(dirname(__FILE__))."/libraries/connector.php");
+require_once(__DIR__."/../libraries/connector.php");
 
 class Student
 {

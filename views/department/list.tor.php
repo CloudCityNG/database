@@ -1,62 +1,22 @@
-<<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<?php include_once __DIR__.'/../partial/_head.tor.php' ?>
 	<title>Department List</title>
-	<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 </head>
 <body>
- <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Student Manager
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="../../controllers/student/list.php">Student Board</a>
-                </li>
-                <li>
-                    <a href="../../controllers/department/list.php">Department Board</a>
-                </li>
-                <li>
-                    <a href="../../controllers/instructor/list.php">Instructor Board</a>
-                </li>
-                <li>
-                    <a href="../../controllers/reports/list.php">Report Board</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-9">
-				<h2>List Department</h2>
-			</div>
-			<div class="col-md-3">
-				<a class="add pull-right" href="../../controllers/department/add.php">
-					<button type="button" class="btn btn-info">Add Department</button>
-				</a>
-			</div>
-			
-				
-			
+<div id="wrapper">
+	<?php include_once __DIR__.'/../partial/_nav.tor.php' ?>
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-9">
+					<h2>Department List</h2>
+				</div>
+				<div class="col-md-3">
+					<a class="add pull-right" href="../../controllers/department/add.php">
+						<button type="button" class="btn btn-info">Add Department</button>
+					</a>
+				</div>
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -165,8 +125,9 @@
 			
 		
 		</div>
+		</div>
 	</div>
+</div> <!--wrapper-->
+<?php include_once __DIR__.'/../partial/_js.tor.php' ?>
 </body>
-<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
-	<script type="text/javascript" src="../../public/js/bootstrap.min.js"></script>
 </html>

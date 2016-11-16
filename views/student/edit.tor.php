@@ -1,15 +1,16 @@
 <html>
 <head>
     <?php include_once __DIR__.'/../partial/_head.tor.php' ?>
-    <title>Danh sách sinh viên</title>
+    <title>Update Student</title>
 </head>
 <body>
 <div id="wrapper">
     <?php include_once __DIR__.'/../partial/_nav.tor.php' ?>
-    <div class="container-fluid">
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2>Sửa thông tin sinh viên</h2>
+                <h2>Update Student Information</h2>
                 <form id="form" method="post">
                     <div class="form-group">
                         <label for="student_number">Student Number:</label>
@@ -78,6 +79,7 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
 </div> <!--wrapper-->
 <?php include_once __DIR__.'/../partial/_js.tor.php' ?>

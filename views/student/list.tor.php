@@ -1,7 +1,7 @@
 <html>
 <head>
     <?php include_once __DIR__.'/../partial/_head.tor.php' ?>
-    <title>Danh sách sinh viên</title>
+    <title>Student List</title>
 </head>
 <body>
 <div id="wrapper">
@@ -78,7 +78,8 @@
                     <?php endforeach; ?>
                 </table>
         </div>
-    </div> <!--page-content-wrapper-->
+    </div>
+    </div><!--page-content-wrapper-->
 </div> <!--wrapper-->
     <?php include_once __DIR__.'/../partial/_js.tor.php' ?>
 </body>
