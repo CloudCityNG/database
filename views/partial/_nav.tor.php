@@ -16,6 +16,9 @@
             <a href="../../controllers/instructor/list.php">Instructor Board</a>
         </li>
         <li>
+            <a href="../../controllers/assignment/list.php">Assignment Board</a>
+        </li>
+        <li>
             <a href="../../controllers/report/list.php">Report Board</a>
         </li>
         <li>

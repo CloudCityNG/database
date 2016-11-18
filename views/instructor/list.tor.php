@@ -28,7 +28,6 @@
 					<th>Extension</th>
 				</tr>
 			</thead>
-
 			<tbody>
 			<?php foreach ($instructor_list as $instructor ): ?>
 			
@@ -39,8 +38,10 @@
 					<td><?php echo $instructor['phone_number'];?></td>
 					<td><?php echo $instructor['extension'];?></td>
 					<td>
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="<?php echo "#edit".$instructor['id']?>">Edit</button>
-					</td>
+                            <a href="../../controllers/instructor/edit.php?id= <?php echo $instructor['id'] ?>"><button type="button" class="btn btn-primary">
+                                Edit
+                            </button></a>
+                    </td>
 					<td>
 						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="<?php echo "#delete".$instructor['id']?>">Delete</button>
 					</td>
