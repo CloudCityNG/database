@@ -25,6 +25,7 @@ if($_POST) {
         "department_id" => $_POST["department_id"],
         "instructor_id" => $_POST["instructor_id"]
     );
+
     $class_model->add_class($class);
 }
 

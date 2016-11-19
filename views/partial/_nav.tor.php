@@ -22,6 +22,9 @@
             <a href="../../controllers/report/list.php">Report Board</a>
         </li>
         <li>
+            <a href="../../controllers/class/list.php">Class Board</a>
+        </li>
+        <li>
             <a href="../../controllers/student_and_class/list.php">Student And Class</a>
         </li>
     </ul>

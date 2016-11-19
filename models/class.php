@@ -6,7 +6,7 @@
  * Time: 9:38 PM
  */
 
-require_once(dirname(dirname(__FILE__))."/libraries/connector.php");
+require_once(__DIR__."/../libraries/connector.php");
 
 class Clazz
 {
@@ -37,10 +37,10 @@ class Clazz
     }
 
     public function add_class($class) {
-        $stmt = $this->conn->prepare("INSERT INTO $this->table(class_name, 'section', term, units, 
-          'year', location, days_and_times, note, department_id, instructor_id) 
+        $stmt = $this->conn->prepare("INSERT INTO $this->table (class_name, section, term, units, 
+          year, location, days_and_times, note, department_id, instructor_id) 
           VALUES (:class_name, :section, :term, :units, 
-          :year, :location, :days_and_times, :note, :department_id, :instructor_id");
+          :year, :location, :days_and_times, :note, :department_id, :instructor_id)");
         $value = array(
             "class_name" => $class["class_name"],
             "section" => $class["section"],
@@ -52,6 +52,35 @@ class Clazz
             "note" => $class["note"],
             "department_id" => $class["department_id"],
             "instructor_id" => $class["instructor_id"]
+        );
+        $stmt->execute($value);
+    }
+
+    public function edit_class($id, $class) {
+        $stmt = $this->conn->prepare("UPDATE $this->table SET
+            class_name = :class_name,
+            section = :section,
+            term = :term,
+            units = :units,
+            year = :year,
+            location = :location,
+            days_and_times = :days_and_times,
+            note = :note,
+            department_id = :department_id,
+            instructor_id = :instructor_id
+            WHERE id = :id");
+        $value = array(
+            "class_name" => $class["class_name"],
+            "section" => $class["section"],
+            "term" => $class["term"],
+            "units" => $class["units"],
+            "year" => $class["year"],
+            "location" => $class["location"],
+            "days_and_times" => $class["days_and_times"],
+            "note" => $class["note"],
+            "department_id" => $class["department_id"],
+            "instructor_id" => $class["instructor_id"],
+            "id" => $id
         );
         $stmt->execute($value);
     }
@@ -76,7 +105,7 @@ class Clazz
         $stmt = $this->conn->prepare("SELECT * FROM $table");
         $stmt->execute();
         return $stmt->fetchAll();
-    }    
+    }
 
     public function instructors() {
         $stmt = $this->conn->prepare("

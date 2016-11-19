@@ -5,7 +5,7 @@
  * Date: 25/10/2016
  * Time: 20:50
  */
-require_once(dirname(dirname(dirname(__FILE__)))."/models/class.php");
+require_once(__DIR__."/../../models/class.php");
 
 $class_model = new Clazz();
 
