@@ -19,7 +19,7 @@ class Clazz
 
     public function get_class_list() {
         $stmt = $this->conn->prepare("
-            SELECT t.*, d.department_name, i.instructor_name,
+            SELECT t.*, d.department_name, i.instructor_name
             FROM $this->table t
             INNER JOIN department d
               ON t.department_id = d.id
@@ -61,16 +61,22 @@ class Clazz
         $stmt->execute(array($id));
     }
 
-    public function departments() {
-        $stmt = $this->conn->prepare("
-            SELECT DISTINCT d.department_name, d.id
-            FROM $this->table t
-            INNER JOIN department d
-              ON t.department_id = d.id
-        ");
+    // public function departments() {
+    //     $stmt = $this->conn->prepare("
+    //         SELECT DISTINCT d.department_name, d.id
+    //         FROM $this->table t
+    //         INNER JOIN department d
+    //           ON t.department_id = d.id
+    //     ");
+    //     $stmt->execute();
+    //     return $stmt->fetchAll();
+    // }
+    public function departments(){
+        $table = 'department';
+        $stmt = $this->conn->prepare("SELECT * FROM $table");
         $stmt->execute();
         return $stmt->fetchAll();
-    }
+    }    
 
     public function instructors() {
         $stmt = $this->conn->prepare("

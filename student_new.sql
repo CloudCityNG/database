@@ -411,7 +411,9 @@ ALTER TABLE `department`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 -- Constraints for dumped tables
 --
-
+-- AUTO_INCREMENT for table 'class'
+ALTER TABLE `class`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for table `assignment`
 --

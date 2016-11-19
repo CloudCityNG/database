@@ -11,6 +11,8 @@ Công việc đã làm:
 Hoàn thành edit,delete,add cho 2 bảng department + report
 UPDATE increment cho id của depart ment. a/e pull database về và chạy lại database nhé.
 Xây dựng navbar cho các trang
+Cập nhật lại auto increment cho id bẳng class mn nhớ pull về và chạy lại database nhé
+
 --------------------------------------------------------------------------------
 
 Require
