@@ -7,6 +7,16 @@
             </a>
         </li>
         <li>
+            <div class="input-group" style="width:200px; margin-left: 20px;">
+              <input type="Search" placeholder="Search by id..." class="form-control" />
+                   <div class="input-group-btn">
+                       <button class="btn btn-success" onsubmit="">
+                       <span class="glyphicon glyphicon-search"></span>
+                       </button>
+                   </div>
+            </div>
+        </li>
+        <li>
             <a href="../../controllers/student/list.php">Student Board</a>
         </li>
         <li>
