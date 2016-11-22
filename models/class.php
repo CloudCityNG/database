@@ -107,13 +107,19 @@ class Clazz
         return $stmt->fetchAll();
     }
 
-    public function instructors() {
-        $stmt = $this->conn->prepare("
-            SELECT DISTINCT i.instructor_name, i.id
-            FROM $this->table t
-            INNER JOIN instructor i
-              ON t.instructor_id = i.id
-        ");
+//    public function instructors() {
+//        $stmt = $this->conn->prepare("
+//            SELECT DISTINCT i.instructor_name, i.id
+//            FROM $this->table t
+//            INNER JOIN instructor i
+//              ON t.instructor_id = i.id
+//        ");
+//        $stmt->execute();
+//        return $stmt->fetchAll();
+//    }
+    public function instructors(){
+        $table = 'instructor';
+        $stmt = $this->conn->prepare("SELECT * FROM $table");
         $stmt->execute();
         return $stmt->fetchAll();
     }
