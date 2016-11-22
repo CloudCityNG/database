@@ -8,8 +8,8 @@
 
         <!-- Sidebar -->
         <?php include_once __DIR__.'/../partial/_nav.tor.php' ?>
- 
-    <div class="container">
+<div id="page-content-wrapper">
+    <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
             <h2>Student And Class List</h2>
@@ -129,6 +129,7 @@
         </table>
     </div>
 </div> 
+</div>
  </div>
 
  
